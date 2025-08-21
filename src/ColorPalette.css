@@ -59,7 +59,7 @@ h4 {
 .preview-color {
   display: inline-block;
   width: 63px;
-  height: 14px;
+  height: 7px;
   border-radius: 3px;
   border: 1px solid #c0c0c0;
   margin-left: 8px;
@@ -201,3 +201,180 @@ h4 {
 #palette{
   margin-left: 30px;
 }
+
+/* ---------- Gradient Section Extensions ---------- */
+.gradient-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 8px 5px;
+  box-sizing: border-box;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ctrl-grp1 {
+  padding: 0px 0px 0px 15px;
+}
+.parallel-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.angle-picker {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.indicator {
+  width: 2px;
+  height: 13px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+}
+.color-stop-list-view {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 25px;
+}
+.color-selector {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.add-stop {
+  font-size: 22px;
+  position: relative;
+  bottom: 6px;
+}
+.selected {
+  border: 2px solid grey;
+  box-shadow: 2px 2px 3px 1px rgb(0 0 0 / 28%);
+}
+.opacity-control {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  background-size: contain, contain;
+  background-repeat: no-repeat, repeat;
+  margin-right: 10px;
+}
+.pointer {
+  position: absolute;
+  border: 3px double #fafafa;
+  top: -25%;
+  width: 10px;
+  height: 30px;
+  border-radius: 5px;
+}
+.remove-stop {
+  height: 20px;
+  width: 20px;
+  background: url(close.svg) no-repeat center;
+  background-size: 115%;
+  cursor: pointer;
+  background-position: 1px;
+}
+.color-stop-chart {
+  position: relative;
+  width: 95%;
+  height: 24px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5.5px;
+}
+.gradient-preview {
+  width: 100%;
+  height: 24px;
+}
+.gradient-preview-full {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+}
+.color-stop-circle {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 34px;
+  border: 3px double #fafafa;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+.color-stop-circle:active {
+  cursor: grabbing;
+}
+.btnWrapperGradient {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+  width: 100%;
+}
+.btnWrapperGradient .applyBtn {
+  width: 70px;
+  height: 28px;
+  line-height: 26px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 11px;
+  margin-left: 8px;
+  border-radius: 4px !important;
+  background: #4298F5;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.color-box-gradient {
+  width: 220px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #fff 0%, #f00 100%), linear-gradient(to top, #000 0%, transparent 100%);
+  position: relative;
+  cursor: crosshair;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.11);
+}
+
+.paletteCanvas {
+  border-radius: 10px;
+  border: 1px solid #999;
+  cursor: crosshair;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: block;
+  background: #fff;
+}
+
+.hue-pointer {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 4px #333;
+  border: 2px solid white;
+  z-index: 2;
+}
+.hue-pointer.grabbed { cursor: grabbing; }
